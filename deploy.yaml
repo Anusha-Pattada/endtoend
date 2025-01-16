@@ -1,0 +1,19 @@
+---
+- name: Deploy Java Hello World App on Tomcat Server
+  hosts: tomcat-server
+  become: yes
+
+  tasks:
+    - name: Pull the latest Docker image
+      docker_image:
+        name: "{{ registry }}/{{ image_name }}"
+        source: pull
+
+    - name: Run the Docker container
+      docker_container:
+        name: "helloworld-java-container"
+        image: "{{ registry }}/{{ image_name }}"
+        state: started
+        restart_policy: unless-stopped
+        ports:
+          - "8080:8080"
