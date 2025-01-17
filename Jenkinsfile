@@ -35,8 +35,8 @@ pipeline {
         stage('Push Docker Image to Registry') {
             steps {
                 script {
-                    docker.withRegistry('', 'docker-credentials') {
-                        docker.image("${DOCKER_IMAGE}").push()
+                    docker.withRegistry('', 'docker') {
+                        docker.image("${IMAGE_NAME}").push()
                     }
                 }
             }
