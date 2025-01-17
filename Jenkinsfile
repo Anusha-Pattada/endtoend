@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'helloworld-java'
+        //IMAGE_NAME = 'helloworld-java'
         REGISTRY = 'https://hub.docker.com/repositories/anushapj28'  // e.g., DockerHub or private registry
         //DOCKER_IMAGE = "${REGISTRY}/${IMAGE_NAME}:latest"
         //DOCKER_IMAGE = "${REGISTRY}/${IMAGE_NAME}"
