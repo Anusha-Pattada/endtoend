@@ -16,11 +16,11 @@ pipeline {
                 checkout scm
             }
         }
-        /*stage('build') {
+        stage('build') {
             steps {
-                sh "mvn clean install"
+                sh "mvn compile"
             }
-        }*/
+        }
 
         stage('Build Docker Image') {
             steps {
