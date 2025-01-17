@@ -1,6 +1,6 @@
 ---
 - name: Deploy Java Hello World App on Tomcat Server
-  hosts: tomcat-server
+  hosts: all
   become: yes
 
   tasks:
