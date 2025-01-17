@@ -18,7 +18,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                   sudo docker build("${DOCKER_IMAGE}")
+                   docker build("${DOCKER_IMAGE}")
                     //sudo docker build -t anushapj28/helloworld-java:tag123 .
                 }
             }
