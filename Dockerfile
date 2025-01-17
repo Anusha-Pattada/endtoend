@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the compiled Java file (assuming it's already compiled to HelloWorld.class)
-COPY HelloWorld.class /app
+COPY . /app
 
 
 # Run the Java application
