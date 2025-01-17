@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                    //sudo docker.build("${DOCKER_IMAGE}")
-                    sudo docker build -t anushapj28/helloworld-java:tag123
+                    sudo docker build -t anushapj28/helloworld-java:tag123 .
                 }
             }
         }
