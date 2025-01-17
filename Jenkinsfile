@@ -35,8 +35,10 @@ pipeline {
         stage('Push Docker Image to Registry') {
             steps {
                 script {
-                    docker.withRegistry('', 'docker') {
-                        docker.image("${IMAGE_NAME}").push()
+                    //docker.withRegistry('', 'docker') {
+                        //docker.image("${IMAGE_NAME}").push()
+                      docker.withRegistry(REGISTRY_URL, 'dockerhub-credentials') {
+                        docker.image("${IMAGE_NAME}:latest").push()
                     }
                 }
             }
