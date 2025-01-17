@@ -16,6 +16,10 @@ pipeline {
                 checkout scm
             }
         }
+        stage('build') {
+            steps {
+                sh "mvn clean install"
+            }
 
         stage('Build Docker Image') {
             steps {
