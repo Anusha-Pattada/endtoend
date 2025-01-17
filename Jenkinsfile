@@ -47,7 +47,7 @@ pipeline {
         stage('Deploy to Tomcat with Ansible') {
             steps {
                 script {
-                    sh "ansible-playbook -i inventory/hosts deploy.yaml"
+                    sh "ansible-playbook -i inventory deploy.yaml"
                 }
             }
         }
