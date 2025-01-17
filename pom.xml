@@ -10,13 +10,7 @@
     <version>1.0-SNAPSHOT</version> <!-- Version of your project -->
     <packaging>jar</packaging> <!-- Packaging type (JAR file for a simple Java application) -->
 
-    <!-- Parent of the project -->
-    <parent>
-        <groupId>org.apache.maven</groupId>
-        <artifactId>maven-archetype-quickstart</artifactId>
-        <version>1.4</version>
-        <relativePath/> <!-- Lookup parent from repository -->
-    </parent>
+    
 
     <!-- Build configuration -->
     <build>
