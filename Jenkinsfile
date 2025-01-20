@@ -47,7 +47,9 @@ pipeline {
         stage('Deploy to Tomcat with Ansible') {
             steps {
                 script {
-                    sh "sudo ansible-playbook -i inventory.ini -vvv deploy.yaml"
+                    //sh "sudo ansible-playbook -i inventory.ini -vvv deploy.yaml"
+                    sh "ansible-playbook -i inventory.ini --private-key=~/.ssh/id_ed25519 deploy.yaml"
+
                 }
             }
         }
